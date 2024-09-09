@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">	
+	<th:block th:fragment="headerFragment">
+		<header class="header">
+	        <!-- 로고 -->
+	        <div class="logo">
+	            <a href="#"><img src="logo.png" alt="Logo" height="40"></a>
+	        </div>
+	
+	        <!-- 메뉴 -->
+	        <ul class="nav-menu">
+	            <li><a href="#">Dashboard</a></li>
+	            <li><a href="#">UI Elements</a></li>
+	            <li><a href="#">Forms</a></li>
+	            <li><a href="#">Tables</a></li>
+	            <li><a href="#">Icons</a></li>
+	        </ul>
+	
+	        <!-- 검색창 및 프로필 -->
+	        <div class="profile">
+	            <!-- 검색창 -->
+	            <div class="search-bar">
+	                <input type="text" placeholder="Search now">
+	            </div>
+	            <!-- 프로필 이미지 -->
+	            <img src="profile.jpg" alt="Profile">
+	        </div>
+	    </header>
+	</th:block>	    
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<style>
+	        /* 기본 스타일 */
+	        body {
+	            font-family: Arial, sans-serif;
+	            margin: 0;
+	            padding: 0;
+	        }
+	
+	        /* 헤더 스타일 */
+	        .header {
+	            background-color: #f8f9fa;
+	            padding: 20px;
+	            display: flex;
+	            justify-content: space-between;
+	            align-items: center;
+	            border-bottom: 2px solid #ddd;
+	        }
+	
+	        /* 메뉴 스타일 */
+	        .nav-menu {
+	            display: flex;
+	            list-style: none;
+	            margin: 0;
+	            padding: 0;
+	        }
+	
+	        .nav-menu li {
+	            margin: 0 15px;
+	        }
+	
+	        .nav-menu li a {
+	            text-decoration: none;
+	            color: #000;
+	            font-size: 16px;
+	        }
+	
+	        .nav-menu li a:hover {
+	            color: #007bff;
+	        }
+	
+	        /* 검색창 스타일 */
+	        .search-bar {
+	            position: relative;
+	        }
+	
+	        .search-bar input[type="text"] {
+	            padding: 8px 15px;
+	            border: 1px solid #ccc;
+	            border-radius: 20px;
+	            width: 200px;
+	        }
+	
+	        /* 프로필 아이콘 스타일 */
+	        .profile {
+	            display: flex;
+	            align-items: center;
+	        }
+	
+	        .profile img {
+	            width: 40px;
+	            height: 40px;
+	            border-radius: 50%;
+	            margin-left: 20px;
+	        }
+	    </style>
+	  	<!-- Required meta tags -->
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  	<title>Skydash Admin</title>
+		<th:block th:replace="~{fragments/config :: configFragment}"></th:block>  
+	</head>	
+	<body>
+		<div class="container-scroller">
+			<!-- header fragment 사용 -->
+			<th:block th:replace="~{fragments/header :: headerFragment}"></th:block> 
+		    <div class="container-fluid page-body-wrapper">
+				<!-- rightsidebar fragment 사용 -->
+				<th:block th:replace="~{fragments/sidebar :: sidebarFragment}"></th:block>
+				 
+				<!-- leftsidebar fragment 사용 --> 
+    			<div class="main-panel">
+    				<!-- content fragment 사용 -->
+    				<th:block layout:fragment="content"></th:block>		
+			    	<!-- footer fragment 사용 -->
+			    	<th:block th:replace="~{fragments/footer :: footerFragment}"></th:block>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>
